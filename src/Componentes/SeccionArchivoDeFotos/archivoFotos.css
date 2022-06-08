@@ -1,0 +1,11 @@
+.tituloSecciones{
+    /*#704B4B*/
+    /*color: #704B4B;*/
+    font-family: serif;
+    font-weight: bold;
+    border-bottom:solid #0693e3;
+}
+.centrarBlog{
+    align-items: center;
+    margin-left: 10%;
+}

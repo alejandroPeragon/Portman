@@ -1,0 +1,15 @@
+@import url('http://fonts.cdnfonts.com/css/jsmath-cmbx10');
+
+.separacion{  
+    padding-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.tituloSecciones{
+    /*#704B4B*/
+    /*color: #704B4B;*/
+    font-family: serif;
+    font-weight: bold;
+    border-bottom: solid #0693e3;
+}

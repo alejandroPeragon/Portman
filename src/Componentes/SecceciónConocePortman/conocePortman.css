@@ -1,0 +1,19 @@
+@import url('http://fonts.cdnfonts.com/css/jsmath-cmbx10');
+.titulo{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+  }
+
+.fondoNoticias{
+    background-color: #F5F5F5;
+}
+
+.tituloSecciones{
+    /*#704B4B*/
+    /*color: #704B4B;*/
+    font-family: serif;
+    font-weight: bold;
+    border-bottom:solid #0693e3; 	
+}
+

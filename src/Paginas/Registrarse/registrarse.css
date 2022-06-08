@@ -1,0 +1,21 @@
+@import url('http://fonts.cdnfonts.com/css/jsmath-cmbx10');
+/*Contenido*/
+.form-margen{
+    padding-right: 100%;
+}
+
+.fondoLogin{
+    background-image: url('./img/portm_n_01_9.JPG');
+    min-width: 100%;
+    height: 46rem;
+}
+.centrar{
+    padding-left: 100px;
+
+}
+.texto{
+    color: white;
+}
+.boton{
+    padding-right: 75%;    
+}

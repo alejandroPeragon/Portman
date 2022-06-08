@@ -1,0 +1,39 @@
+@import url('http://fonts.cdnfonts.com/css/jsmath-cmbx10');
+
+.carousel-inner img {
+  width: 100%;    
+}
+
+.enlace{
+  text-decoration: none;
+  color: black;
+}
+.pegajoso{
+  opacity: 50%;
+  background-color: white;  
+}
+.arriba{
+  z-index: 1000;
+}
+
+.quitar {
+  display:none;
+  position:absolute;
+  text-decoration: none;
+  min-width:10px;
+  list-style: none;
+}
+
+.submenu:hover > ul {
+  display:block;
+  text-decoration: none;
+}
+li ul li {
+  position:relative;
+}
+.top{
+  z-index: 9999;
+}
+.color-menu{
+  background-color: white;
+}

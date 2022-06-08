@@ -1,0 +1,12 @@
+@import url('http://fonts.cdnfonts.com/css/jsmath-cmbx10');
+
+.titulo{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+  }
+
+.centrar {
+  width: 60%;
+  margin-left: 20%;
+}
