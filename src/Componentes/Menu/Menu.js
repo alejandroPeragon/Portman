@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import useUser from '../../Hooks/useUser/useUser';
 import'./Menu.css';
-import fotoSpan from './img/span.png';
+import menu from './img/menu.png';
 import logo from './img/logo.png';
 
 function Menu(){
@@ -22,10 +22,10 @@ function Menu(){
         }else{
             return  (<div> 
                         <li className="nav-item col-2 text-center">
-                            <Link to='/Entrar' className='enlace'>Entrar</Link>
+                            <Link to='/Entrar' className='hover enlace'>Entrar</Link>
                         </li>
                         <li className="nav-item col-2">
-                            <Link to='/Registrarse' className='enlace'>Registrarse</Link>
+                            <Link to='/Registrarse' className='hover enlace'>Registrarse</Link>
                         </li>
                     </div>
                 )
@@ -37,9 +37,9 @@ function Menu(){
             <header className="col-12 navbar navbar-expand-lg color-menu fixed-top">
                 <div className="col-lg-7 ">
                     <nav>
-                        <Link to='/'><img src={logo} alt='logo' width='100px'></img></Link>
+                    <Link to='/'><img src={logo} alt='logo' width='100px'></img></Link>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">                                
-                            <span class="navbar-toggler-icon">aaaaaaaaaaaaa</span>
+                            <img src={menu}></img>
                         </button>
                     </nav>
                 </div>
@@ -47,19 +47,19 @@ function Menu(){
                     <div className="collapse row navbar-collapse" id="navbarText">
                         <ul className="navbar-nav ">
                             <li className="nav-item col-2">
-                                <Link to='/' className='enlace'>Inicio</Link>
+                                <Link to='/' className='hover enlace'>Inicio</Link>
                             </li>
                             <li className="nav-item col-2">
-                                <Link to='/Blog' className='enlace'>Nuestra Historia</Link>
+                                <Link to='/Blog' className='hover enlace'>Nuestra Historia</Link>
                             </li>
                             <li className="nav-item col-2">
-                                <Link to='/Noticias' className='enlace'>Noticias</Link>
+                                <Link to='/Noticias' className='hover enlace'>Noticias</Link>
                             </li>
                             <li className="dropdown nav-item">
-                                <a href="#" className="dropdown-toggle enlace" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Conoce Portman</span> <span class="caret"></span></a>
+                                <a href="#" className="hover dropdown-toggle enlace" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Conoce Portman</span> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><Link className='enlace' to='/Gastronomia'>Gastronomia</Link></li>
-                                    <li><Link className='enlace' to='/Rutas'>Rutas</Link></li>
+                                    <li><Link className='hover enlace' to='/Gastronomia'>Gastronomia</Link></li>
+                                    <li><Link className='hover enlace' to='/Rutas'>Rutas</Link></li>
                                 </ul>
                             </li>
                             { login() }

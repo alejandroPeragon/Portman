@@ -1,4 +1,4 @@
-//import './index.css';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Menu from '../../Componentes/Menu/Menu';
 import SeccionPrincipal from '../../Componentes/SeccionPrincipal/SeccionPrincipal';
@@ -12,7 +12,7 @@ function Index() {
   return (    
     <html>
       <body>
-      <Menu></Menu>
+      <Menu className='a'></Menu>
       <Carusel></Carusel>
         <main className='container'>
           <SeccionPrincipal></SeccionPrincipal>

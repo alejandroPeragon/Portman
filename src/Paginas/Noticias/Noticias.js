@@ -3,7 +3,6 @@ import imagenNoticias from './fondoNoticias.jpg';
 import Menu from '../../Componentes/Menu/Menu';
 import useGetAllNoticias from '../../Hooks/useGetAllNoticias/useGetAllNoticias';
 import Noticia from '../../Componentes/Noticias/Noticias';
-import ayax_loader from './img/ayax-loader.gif';
 import Cargando from '../../Componentes/Cargando/Cargando';
 
 function Noticias(){
@@ -19,8 +18,8 @@ function Noticias(){
             <Menu></Menu>
             <div><img className='altura' src={imagenNoticias}></img></div>
             <section className='container'>                
-                <div className='row'>
-                    {listaNoticias.noticia.map(recorrerNoticias)}
+                <div className='row'>                    
+                    {listaNoticias.buscando ? <Cargando></Cargando> : listaNoticias.noticia.map(recorrerNoticias)}                    
                 </div>
             </section>
         </main>

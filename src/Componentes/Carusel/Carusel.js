@@ -16,35 +16,34 @@ function Carusel(){
             <div class="carousel-inner">
                 
                 <div class="carousel-item active">                
-                    <img src={fondoIndex} alt="Chicago" className='img-fluid altura' ></img>                    
+                    <img src={fondoIndex} alt="Chicago" className=' altura' ></img>                    
                     <div class="carousel-caption">
                         <h1>Portman</h1>                        
                     </div>   
                 </div>
                 
                 <div class="carousel-item">
-                    <img src={fondoConoce} alt="Los Angeles" className='img-fluid altura'></img>                    
+                    <img src={fondoConoce} alt="Los Angeles" className=' altura'></img>                    
                     <div class="carousel-caption">
-                        <h1>Conoce Portman</h1>
-                        <p>No te pierdas ningina noticia</p>
-                        <button className='btn btn-outline-dark'>Mas Información</button>
+                        <h1>Conoce Portman</h1>                        
+                        <a className='btn btn-outline-light' href='#conocePortman'>Mas Información</a>
                     </div>
                 </div>
 
                 <div class="carousel-item">                    
-                    <img src={fondoSuegerncias} alt="Los Angeles" className='img-fluid altura'></img>                    
+                    <img src={fondoSuegerncias} alt="Los Angeles" className=' altura'></img>                    
                     <div class="carousel-caption">
                         <h1>Sugerencia Y Queja</h1>
                         <p>Cualquier sugerencia o queja sobre el pueblo de portman </p>
-                        <button className='btn btn-outline-dark'>Mas Información</button>
+                        <a className='btn btn-outline-light' href='#formulario'>Mas Información</a>
                     </div>
                 </div>
 
                 <div class="carousel-item">
-                    <img src={fondoHistoria} alt="Los Angeles" className='img-fluid altura'></img>                    
+                    <img src={fondoHistoria} alt="Los Angeles" className=' altura'></img>                    
                     <div class="carousel-caption">
                         <h1>Conoce La Historia de Portman</h1>                        
-                        <button className='btn btn-outline-dark'>Mas Información</button>
+                        <a className='btn btn-outline-dark' href='#blog'>Mas Información</a>
                     </div>
                 </div>
                                                 

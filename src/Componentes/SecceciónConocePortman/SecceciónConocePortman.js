@@ -6,7 +6,7 @@ import { Link } from 'wouter';
 function SecceciónConocePortman(){
     return (
         <section className="row">
-            <div className="col-lg-12" data-aos='zoom-in-up'>
+            <div className="col-lg-12" id='conocePortman' data-aos='zoom-in-up'>
                 <h2 className="text-center tituloSecciones">CONOCE PORTMAN</h2>
                 <p>Si nunca has visitado Portman, aqui tienes lugares, bares, resturantes y muchas para que puedo disfrutrar al maximo de Portman</p>
             </div>

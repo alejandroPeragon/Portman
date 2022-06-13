@@ -5,11 +5,9 @@ function useGetAllNoticias(){
     const [noticia, setNoticias] = useState([]);
     const [buscando, setBuscando] = useState(true);
 
-    function noticias(){
-        setBuscando(true);
-        GetAllNoticias().then(response => { setNoticias(response) });
-        console.log(noticia);
-        setBuscando(false);
+    function noticias(){        
+        GetAllNoticias().then(response => { setBuscando(true); setNoticias(response); setBuscando(false); });
+        console.log(noticia);        
     }
     useEffect(noticias, []);
 

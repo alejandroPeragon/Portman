@@ -7,7 +7,7 @@ function Admin(){
     const [titulo, setTitulo] = useState("");
     const [descripcion, setContenido] = useState("");
     const [descripcionCorta, setDescripcionCorta] = useState("");
-    const [image, setImagen] = useState();
+    const [image, setImagen] = useState("");
 
     let {crearNoticia} = useUser();
     let {sugerenciaQueja} = useSugerenciaQuejas();
@@ -15,17 +15,12 @@ function Admin(){
     function controlarFormulario(event){
         event.preventDefault();
         console.log(image);
-        //console.log(event.target.file);
-        var filesArr = Array.prototype.slice.call(image);
-        console.log(filesArr);
-        
         let formdata = new FormData();
         formdata.append('titulo', titulo);
         formdata.append('descripcion', descripcion);
         formdata.append("image", image);
         formdata.append('descripcionCorta', descripcionCorta);
-        
-        crearNoticia(formdata);
+        crearNoticia({titulo, descripcion, image, descripcionCorta});
     }
 
     function recorrerSugerencias(sugerencias){
@@ -45,13 +40,13 @@ function Admin(){
                     <input className="form-control mr-5" type='text' value={titulo} onChange={(e) => setTitulo(e.target.value)}></input>
                     
                     <label className="mr-2">Contenido</label>
-                    <input className="form-control mr-5"type='text' value={descripcion} onChange={(e) => setContenido(e.target.value)}></input>
+                    <textarea className="form-control mr-5" cols='10' rows='10' value={descripcion} onChange={(e) => setContenido(e.target.value)}></textarea>
                     
                     <label className="mr-2">Descripcion Corta</label>
                     <input className="form-control mr-5"type='text' value={descripcionCorta} onChange={(e) => setDescripcionCorta(e.target.value)}></input>
                     
-                    <label className="mr-2">Imagen (Revisar)</label>
-                    <input className="form-control mr-5" id='file-id' type='file' onChange={(e) => setImagen(e.target.files)}></input>
+                    <label className="mr-2">Imagen (Subir la imagen a el siguiente <a href='https://freeimage.host/' target='_blank'>enlace</a>) si tienes algun problema consulta el <a href='#'>tutorial</a></label>
+                    <input className="form-control mr-5" id='file-id' type='text' onChange={(e) => setImagen(e.target.value)}></input>
                     <button className="btn btn-outline-dark">Crear Noticia</button>
                 </form>
 

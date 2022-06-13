@@ -2,11 +2,10 @@
     background-color: #ececec;    
 }
 
-.logo{
-    border-right: 1px solid black;
-}
-
 .enlace{
     text-decoration: none;
     color: black;
 }
+.centrarLogo{
+    margin-left: 40%;
+}    

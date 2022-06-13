@@ -11,16 +11,16 @@ function SeccionNoticias(){
     function recorrerNoticias(noticias){
         return (
             <article key={noticias.ID} className="col-lg-4 text-center separacionNoticias" data-aos='zoom-in'>
-                <img src={imagenSerie} alt="Logo Sugerencias" width="350px" height="200px"></img>
+                <img src={noticias.imagen} alt="Logo Sugerencias" width="350px" height="200px"></img>
                 <h2>{noticias.Titulo}</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                <p>{noticias.DescripcionCorta}</p>
                 <p><Link className="btn border-dark" to={'/Noticia/'+noticias.ID} role="button"> Leer Mas &raquo;</Link></p>
             </article>
         )
     }
 
     function filtrarUltimasNoticias(noticia){
-        if(noticia.ID>noticias.noticia.length-2){
+        if(noticia.ID>=noticias.noticia.length-2){
             return noticia;
         }
     }
@@ -31,7 +31,7 @@ function SeccionNoticias(){
                 <h2 className='text-center tituloSecciones'>ULTIMAS NOTICIAS</h2>
             </div>           
             
-            { noticias.buscando ? <Cargando></Cargando> : noticias.noticia.filter(filtrarUltimasNoticias).map(recorrerNoticias)}            
+            {console.log(noticias.buscando), noticias.buscando===true ? <Cargando></Cargando> : noticias.noticia.filter(filtrarUltimasNoticias).map(recorrerNoticias)}            
         </section>
     )
 }

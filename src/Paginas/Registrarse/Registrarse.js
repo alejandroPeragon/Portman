@@ -7,29 +7,25 @@ function Registrarse(){
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const [telefono, setTelefono] = useState("");
-    const [correcto, setCorrecto] = useState(true);
-    const {registrarse} = useUser();
-
-    let vadilacionEmail =/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-    let vadilacionTelefono = /^\d{9}/;
-    //let correcto = true;
+    const {registrarse, mensajeRegistro} = useUser();
+    const [enviando, setEnviado] = useState(false)
 
     function manejarFormulario(event){
         event.preventDefault();
-        if(name==='' || password==='' || vadilacionEmail.test(email) || telefono.length==9){
-            //correcto=false;
-            setCorrecto(false);
-        }else{
-            //correcto=true;
-            setCorrecto(true);
-            registrarse({name, email, password, telefono});
-        }        
+        setEnviado(true);
+        console.log(mensajeRegistro)
+        console.log({name, email, password, telefono})
+        registrarse({name, email, password, telefono});        
+    }
+
+    function mensajes (){        
+        return mensajeRegistro.data != undefined ? <p className='text-suscess'>El usuario a sido creado</p>:<p className='text-danger'>Los campos escritos son incorrectos o ya existen</p> 
     }
 
     return(
         <main>
-            <section className="row fondoLogin separacion">
-                <form className="align-content-center form-inline centrar texto" onSubmit={manejarFormulario}>
+            <section className="row fondoLogin ">
+                <form className="align-content-center form-group centrar texto" onSubmit={manejarFormulario}>
                     <label className="mr-2 ">Nombre de Usuario</label>
                     <input type="text" className="form-control mr-5" placeholder="Nombre de Usuario" value={name} onChange={(e) => setName(e.target.value)}></input>
                     <label className="mr-2 mb-1 ">Contraseña</label>
@@ -37,8 +33,8 @@ function Registrarse(){
                     <label className="mr-2 ">Correo Electronico</label>
                     <input type="text" className="form-control mr-5" placeholder="Correo Electronico" value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     <label className="mr-2 ">Telefono</label>
-                    <input type="number " className="form-control mr-5" placeholder="Telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)}></input>
-                    {!correcto ? <p classNameName='text-danger'>Tienes que rellenar todos los campos</p> : ''}
+                    <input type="number " className="form-control mr-5" placeholder="Telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)}></input>                  
+                    {enviando ? mensajes() : ''}
                     <div className="col-2">                            
                         <button className="btn btn-outline-dark">Registrarse</button>
                     </div>

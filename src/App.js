@@ -1,5 +1,3 @@
-//import './App.css';
-//import 'bootstrap/dist/css/bootstrap.css';
 import { Route } from 'wouter';
 import PieDePagina from './Componentes/Footer/Footer';
 import Index from './Paginas/Inicio/Index';
@@ -34,9 +32,9 @@ function App() {
       <Route path='/Rutas' component={NuestraRutas}></Route>
       <Route path='/NuestrasRutas'></Route>
       <Route path='/Entrar' component={Login}></Route>
-      <Route path='/Registrarse' component={Registrarse}></Route>
-      <Route path='/Admin' component={LoginAdmin}></Route>
+      <Route path='/Registrarse' component={Registrarse}></Route>      
       <Route path='/PanelDeControl' component={Admin}></Route>
+      <Route path='/Admin' component={LoginAdmin}></Route>
       <PieDePagina></PieDePagina>      
     </UserContextProvider>
   );

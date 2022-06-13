@@ -7,10 +7,11 @@
 .fondoLogin{
     background-image: url('./img/portm_n_01_9.JPG');
     min-width: 100%;
-    height: 46rem;
+    height: 50rem;
 }
 .centrar{
     padding-left: 100px;
+    padding-top: 130px;
 
 }
 .texto{

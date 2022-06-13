@@ -34,6 +34,14 @@ li ul li {
 .top{
   z-index: 9999;
 }
-.color-menu{
+.color-menu {
   background-color: white;
+}
+.a{
+  background-color: white;
+}
+.hover:hover{
+  text-decoration: none;
+  border-bottom: solid 1px black;
+  color: black;
 }

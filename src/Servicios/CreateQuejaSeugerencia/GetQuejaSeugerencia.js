@@ -7,7 +7,7 @@ function CreateQuejaSeugerencia({Nombre, Apellidos, email, Contenido}){
           },          
         body : JSON.stringify({Nombre, Apellidos, email, Contenido})
     }).then(response => {
-        return response;
+        return response.json();
     })
         
 }
